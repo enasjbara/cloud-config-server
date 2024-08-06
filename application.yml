@@ -1,0 +1,42 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: wings
+      
+logging:
+  file:
+    name: C:\Users\ASUS\Desktop\wings\wings\wings_back\wings    
+    
+microservice:
+  payment-service:
+    endpoints:
+      endpoint:
+        uri: http://PAYMENT-SERVICE/payment/do
+  flight-service:
+    endpoints:
+      endpoint:
+        uri: http://FLIGHT-SERVICE/flight/number
+  offer-service:
+    endpoints:
+      endpoint:
+        uri: http://OFFER-SERVICE/offer/reservation-offers
