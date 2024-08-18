@@ -3,14 +3,14 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://192.168.137.158:8761/eureka/
   instance:
-    hostname: localhost
+    hostname: ASUS
 
 management:
   zipkin:
     tracing:
-      endpoint: http://localhost:9412/api/v2/spans
+      endpoint: http://192.168.137.158:9412/api/v2/spans
   tracing:
     enabled: true
     sampling:
@@ -25,7 +25,7 @@ spring:
       
 logging:
   file:
-    name: C:\Users\ASUS\Desktop\wings\wings\wings_back\wings    
+    name: C:\Users\ASUS\Desktop\wings_back\wings_back\wings    
     
 microservice:
   payment-service:
