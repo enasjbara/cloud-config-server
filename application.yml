@@ -3,14 +3,14 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://192.168.137.158:8761/eureka/
+      defaultZone: http://10.65.11.66:8761/eureka/
   instance:
     hostname: ASUS
 
 management:
   zipkin:
     tracing:
-      endpoint: http://192.168.137.158:9412/api/v2/spans
+      endpoint: http://10.65.11.66:9412/api/v2/spans
   tracing:
     enabled: true
     sampling:
